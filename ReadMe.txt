@@ -1,3 +1,0 @@
-This project had me take someone else's code for a simple webpage and clean it up a little, I found that there was excess code being used and consolodated a lot of it down from multiple entries into one.
-There was no title set for the page which I had to do and none of the images had any alt text associated with them which I also had to do.
-I did modify the padding on some of the content to make it a bit more uniform as well, I've mentioned everything I did with comments within the CSS for the page.
