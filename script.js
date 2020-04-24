@@ -24,24 +24,24 @@ function generate( ) {
   }
 
   if (lowercase) {
-    passHolder += lowerChar;
+    passHold += lowercase;
   }
 
   if (uppercase) {
-    passHolder += upperChar;
+    passHold += upperChar;
   }
 
   if (numbers) {
-    passHolder += numberChar;
+    passHold += numberChar;
   }
 
   if (special) {
-    passHolder += specialChar;
+    passHold += specialChar;
   }
 
-  for (let i = 0; 1 < passLength; i++) {
-    let randomIndex = Math.floor(Math.random( ) * passHolder.length)
-    newPass += passHolder[randomIndex]
+  for (let i = 0; 1 < passwordLength; i++) {
+    let randomIndex = Math.floor(Math.random( ) * passHold.length)
+    newPassword += passHold[randomIndex]
   }
   return newPass
 }
@@ -50,10 +50,9 @@ function writePassword( ) {
   var password = generate( );
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+document.getElementById("passwordText").value = password;
 
 }
 
-generateBtn.addEventListener("click", writePassword);
+button.addEventListener("click", writePassword);
 
-}
