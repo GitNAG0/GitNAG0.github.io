@@ -23,36 +23,35 @@ function generate( ) {
     return
   }
 
-  if (lowercase) {
-    passHold += lowercase;
+  if (charLowerConf) {
+    inProgressPassword += lowercase;
   }
 
-  if (uppercase) {
-    passHold += upperChar;
+  if (charUpperConf) {
+    inProgressPassword += uppercase;
   }
 
-  if (numbers) {
-    passHold += numberChar;
+  if (charNumConf) {
+    inProgressPassword += numbers;
   }
 
-  if (special) {
-    passHold += specialChar;
+  if (charSpecConf) {
+    inProgressPassword += special;
   }
-
-  for (let i = 0; 1 < passwordLength; i++) {
-    let randomIndex = Math.floor(Math.random( ) * passHold.length)
-    newPassword += passHold[randomIndex]
+    console.log(inProgressPassword)
+  for (let i = 0; i < passwordLength; i++) {
+    let randomIndex = Math.floor(Math.random( ) * inProgressPassword.length)
+    newPassword += inProgressPassword[randomIndex]
   }
-  return newPass
+  return newPassword
 }
 
 function writePassword( ) {
   var password = generate( );
   var passwordText = document.querySelector("#password");
 
-document.getElementById("passwordText").value = password;
+  passwordText.value = password;
 
 }
 
-button.addEventListener("click", writePassword);
-
+document.getElementById('button').addEventListener("click", writePassword);
