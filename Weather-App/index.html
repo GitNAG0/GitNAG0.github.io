@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container" id="main-container">
+    <div class="container" id="header">
+        <p id="header-text">Weather Dashboard</p>
+    </div>
+    <div class="row" id="main-row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" id="main-col-left">
+            <form id="form">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Enter a City:</label>
+                  <input type="text" class="form-control" id="city-input" autocomplete="off" placeholder="">
+                </div>
+            </form>
+            <div class="button-div">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9" id="main-col-right">
+            <div class="city-div">
+                <p id="icon" class="icon"></p>
+                <p id="city-title"></p>
+                <p id="temperature"></p>
+                <p id="wind-speed"></p>
+                <p id="UV-index" class="badge"></p>
+            </div>
+            <div class="forecast-div">
+                <div class="forecast-box" id="box1">
+                    <p id="date1"></p>
+                </div>
+                <div class="forecast-box" id="box2">
+                    <p id="date2"></p>
+                </div>
+                <div class="forecast-box" id="box3">
+                    <p id="date3"></p>
+                </div>
+                <div class="forecast-box" id="box4">
+                    <p id="date4"></p>
+                </div>
+                <div class="forecast-box" id="box5">
+                    <p id="date5"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script src="script.js">
+</script>
+</body>
+</html>
